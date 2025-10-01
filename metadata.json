@@ -1,0 +1,5 @@
+{
+  "name": "Which Hand",
+  "description": "A game of chance where you guess the correct hand to win points. Win consecutive rounds to multiply your winnings.",
+  "requestFramePermissions": []
+}
