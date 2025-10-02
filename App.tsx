@@ -507,7 +507,7 @@ const App: React.FC = () => {
   }[visualEffect];
 
   return (
-    <div dir={language === 'ar' ? 'rtl' : 'ltr'} className={`min-h-screen bg-[var(--bg-from)] text-[var(--text-main)] flex flex-col items-center justify-center font-sans p-2`}>
+    <div dir={language === 'ar' ? 'rtl' : 'ltr'} className={`min-h-screen bg-[var(--bg-from)] text-[var(--text-main)] flex flex-col items-center font-sans`}>
         <div className="absolute inset-0" style={{backgroundImage: 'radial-gradient(ellipse at top, var(--bg-radial-accent), transparent 60%)'}}></div>
         
         {isStrategyModalOpen && <StrategyModal onClose={() => setIsStrategyModalOpen(false)} t={t.strategy} />}
@@ -525,7 +525,7 @@ const App: React.FC = () => {
             setTheme={setTheme}
         />}
         
-        <div className={`w-full max-w-md h-full sm:h-[844px] sm:max-h-[90vh] bg-[var(--surface-1)] sm:rounded-3xl shadow-2xl flex flex-col relative overflow-hidden ${visualEffectClasses}`}>
+        <div className={`w-full max-w-md flex-grow bg-[var(--surface-1)] sm:rounded-3xl shadow-2xl flex flex-col relative overflow-hidden ${visualEffectClasses}`}>
         
             <header className="w-full flex justify-between items-center z-10 p-4 pt-6 flex-shrink-0">
               <button onClick={playClick} className="p-2 hover:bg-white/10 rounded-full transition-colors"><BackIcon className="w-6 h-6" /></button>
@@ -613,8 +613,7 @@ const App: React.FC = () => {
                             {t.footer.stake}
                         </button>
                     </div>
-                     <div className="w-full flex justify-between items-center text-[var(--text-muted)] text-sm px-2">
-                        <button className="flex items-center gap-1 hover:text-white transition-colors invisible"><SettingsIcon className="w-4 h-4" /> {t.footer.settings}</button>
+                     <div className="w-full flex justify-center items-center text-[var(--text-muted)] text-sm px-2">
                         <button className="flex items-center gap-1">
                             <BoltIcon className="w-4 h-4 text-[var(--primary)]" />
                             <span className="font-semibold">
